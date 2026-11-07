@@ -1,0 +1,16 @@
+[package]
+name = "ev-fetch"
+version = "0.1.0"
+edition = "2021"
+description = "EV//Fetch — minimal system fetch"
+
+[[bin]]
+name = "evfetch"
+path = "src/main.rs"
+
+[profile.release]
+opt-level = "z"
+lto = true
+strip = true
+panic = "abort"
+codegen-units = 1
